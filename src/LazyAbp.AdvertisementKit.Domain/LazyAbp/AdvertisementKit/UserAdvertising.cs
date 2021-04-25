@@ -6,7 +6,7 @@ using Volo.Abp.MultiTenancy;
 
 namespace LazyAbp.AdvertisementKit
 {
-    public class UserAdvertising : FullAuditedAggregateRoot<Guid>
+    public class UserAdvertising : FullAuditedAggregateRoot<Guid>, IMultiTenant
     {
         public virtual Guid? TenantId { get; set; }
 
@@ -28,12 +28,14 @@ namespace LazyAbp.AdvertisementKit
         }
 
         public UserAdvertising(
-            Guid id, 
+            Guid id,
+            Guid? tenantId,
             Guid userId, 
             Guid advertisingItemId, 
             DateTime expireTime
         ) : base(id)
         {
+            TenantId = tenantId;
             UserId = userId;
             AdvertisingItemId = advertisingItemId;
             ExpireTime = expireTime;

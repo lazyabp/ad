@@ -43,7 +43,7 @@ namespace LazyAbp.AdvertisementKit
             if (!adItem.IsOnSale)
                 throw new UserFriendlyException(L["AdPositonHasBeenSoldOut"]);
 
-            var userAd = new UserAdvertising(GuidGenerator.Create(), CurrentUser.GetId(), input.AdvertisingItem.AdvertisingItemId, Clock.Now);
+            var userAd = new UserAdvertising(GuidGenerator.Create(), CurrentUser.TenantId, CurrentUser.GetId(), input.AdvertisingItem.AdvertisingItemId, Clock.Now);
             userAd = await _repository.InsertAsync(userAd);
 
             var result = ObjectMapper.Map<UserAdvertising, UserAdvertisingDto>(userAd);

@@ -5,8 +5,7 @@ using Volo.Abp.Modularity;
 namespace LazyAbp.AdvertisementKit.MongoDB
 {
     [DependsOn(
-        typeof(AdvertisementKitTestBaseModule),
-        typeof(AdvertisementKitMongoDbModule)
+        typeof(AdvertisementKitTestBaseModule)
         )]
     public class AdvertisementKitMongoDbTestModule : AbpModule
     {
