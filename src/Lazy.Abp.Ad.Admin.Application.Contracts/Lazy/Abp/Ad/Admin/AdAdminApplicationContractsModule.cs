@@ -5,7 +5,10 @@ using Volo.Abp.Modularity;
 
 namespace Lazy.Abp.Ad.Admin
 {
-    [DependsOn(typeof(AdDomainSharedModule))]
+    [DependsOn(
+        typeof(AdApplicationContractsModule),
+        typeof(AdDomainSharedModule)
+    )]
     public class AdAdminApplicationContractsModule : AbpModule
     {
     }

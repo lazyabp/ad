@@ -25,7 +25,7 @@ namespace Lazy.Abp.Ad
                 options.Resources
                     .Add<AdResource>("en")
                     .AddBaseTypes(typeof(AbpValidationResource))
-                    .AddVirtualJson("/LazyAbp/Ad/Localization");
+                    .AddVirtualJson("/Lazy/Abp/Ad/Localization/Ad");
             });
 
             Configure<AbpExceptionLocalizationOptions>(options =>
