@@ -12,6 +12,7 @@ using System.Linq;
 
 namespace Lazy.Abp.Ad
 {
+    [Obsolete]
     [Authorize]
     public class UserAdvertisingAppService : CrudAppService<UserAdvertising, UserAdvertisingDto, Guid, UserAdvertisingListInput, UserAdvertisingCreateUpdateDto, UserAdvertisingCreateUpdateDto>,
         IUserAdvertisingAppService

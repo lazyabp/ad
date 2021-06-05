@@ -10,7 +10,8 @@ using Volo.Abp.AspNetCore.Mvc;
 
 namespace Lazy.Abp.Ad.Admin
 {
-    [RemoteService(Name = AdAdminRemoteServiceConsts.RemoteServiceName)]
+    [Obsolete]
+    [RemoteService(Name = AdAdminRemoteServiceConsts.RemoteServiceName, IsEnabled = false)]
     [Area("ad")]
     [ControllerName("UserAdvertising")]
     [Route("api/ad/user-advertisings/management")]

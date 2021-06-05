@@ -29,7 +29,7 @@ namespace Lazy.Abp.Ad.Admin
         public async override Task<PagedResultDto<AdvertisingDto>> GetListAsync(AdvertisingListInput input)
         {
             var totalCount = await _repository.GetCountAsync(input.AdvertisementType, input.IsActive, input.Filter);
-            var advertisings = await _repository.GetListAsync(input.Sorting, input.MaxResultCount, input.SkipCount, input.AdvertisementType, input.IsActive, input.Filter, input.includeDetails);
+            var advertisings = await _repository.GetListAsync(input.Sorting, input.MaxResultCount, input.SkipCount, input.AdvertisementType, input.IsActive, input.Filter, input.IncludeDetails);
 
             return new PagedResultDto<AdvertisingDto>(
                     totalCount,

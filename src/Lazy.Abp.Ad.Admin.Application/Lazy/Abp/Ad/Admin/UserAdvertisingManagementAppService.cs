@@ -11,6 +11,7 @@ using Volo.Abp.Application.Services;
 
 namespace Lazy.Abp.Ad.Admin
 {
+    [Obsolete]
     public class UserAdvertisingManagementAppService : ApplicationService, IUserAdvertisingManagementAppService
     {
         private readonly IUserAdvertisingRepository _repository;

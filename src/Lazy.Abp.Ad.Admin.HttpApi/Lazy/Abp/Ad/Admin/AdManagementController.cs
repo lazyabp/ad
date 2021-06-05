@@ -50,7 +50,7 @@ namespace Lazy.Abp.Ad.Admin
         }
 
         [HttpPut]
-        [Route("{id}/set-active")]
+        [Route("{id}/set-active/{isActive}")]
         public Task SetActive(Guid id, bool isActive)
         {
             return _service.SetActive(id, isActive);

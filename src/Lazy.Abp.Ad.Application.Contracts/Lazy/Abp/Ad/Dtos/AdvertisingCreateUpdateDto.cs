@@ -8,6 +8,8 @@ namespace Lazy.Abp.Ad.Dtos
     {
         public string Name { get; set; }
 
+        public string Label { get; set; }
+
         public AdvertisementType AdvertisementType { get; set; }
 
         public int Width { get; set; }

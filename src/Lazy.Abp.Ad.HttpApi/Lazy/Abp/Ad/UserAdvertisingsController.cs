@@ -9,7 +9,8 @@ using Volo.Abp.Application.Dtos;
 
 namespace Lazy.Abp.Ad
 {
-    [RemoteService(Name = AdRemoteServiceConsts.RemoteServiceName)]
+    [Obsolete]
+    [RemoteService(Name = AdRemoteServiceConsts.RemoteServiceName, IsEnabled = false)]
     [Area("ad")]
     [ControllerName("UserAdvertising")]
     [Route("api/ad/user-advertisings")]

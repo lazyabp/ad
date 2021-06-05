@@ -13,6 +13,6 @@ namespace Lazy.Abp.Ad.Dtos
 
         public AdvertisementType? AdvertisementType { get; set; }
 
-        public bool includeDetails { get; set; }
+        public bool IncludeDetails { get; set; }
     }
 }
